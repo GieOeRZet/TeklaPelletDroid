@@ -3,6 +3,12 @@
 Aplikacja Android do sterowania kotłem pelletowym Tekla/Estyma przez moduł TeklaPelletCAN (urządzenie podłączane
 do magistrali CAN kotła). Działa w tej samej sieci Wi‑Fi co moduł; znajduje go automatycznie albo po adresie IP.
 
+<p>
+  <img src="img/pulpit_dark.png" alt="Pulpit – motyw ciemny" width="260">
+  <img src="img/pulpit_light.png" alt="Pulpit – motyw jasny" width="260">
+  <img src="img/wyglad.png" alt="Menu Wygląd" width="260">
+</p>
+
 ## Co potrafi
 
 - **Pulpit** (kocioł, palnik, CWU, CO, paliwo, alarmy, temperatury), **Instalacja** (schemat na żywo), **Nastawy**,
@@ -22,6 +28,16 @@ zezwolenia na instalację z nieznanych źródeł).
 
 PIN aplikacji (opcjonalny) chroni tylko uruchomienie aplikacji. Osobny PIN poziomu kotła (0900/0999, jak w panelu
 fizycznym) chroni zapis parametrów i wygasa po 5 minutach bezczynności.
+
+## Komunikacja — jak to działa
+
+```
+Aplikacja (ekrany + obsługa) ── REST/WebSocket, w sieci lokalnej ──▶ moduł TeklaPelletCAN ──CAN── kocioł
+```
+
+Aplikacja łączy się z modułem **tylko w sieci lokalnej** — nie potrzebuje internetu do sterowania kotłem (internet
+jest używany wyłącznie do sprawdzenia, czy jest nowsza wersja aplikacji/oprogramowania modułu; można to też zrobić
+ręcznie, offline). Każdy zapis parametru przechodzi przez wewnętrzną blokadę zapisu i wymaga poziomu dostępu (PIN).
 
 ## Zastrzeżenia
 
