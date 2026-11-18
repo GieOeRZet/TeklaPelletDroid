@@ -24,6 +24,28 @@ do magistrali CAN kotła). Działa w tej samej sieci Wi‑Fi co moduł; znajduje
 Pobierz `teklapelletcan.apk` z [wydań tego repozytorium](../../releases) i zainstaluj ręcznie (Android 10+; wymaga
 zezwolenia na instalację z nieznanych źródeł).
 
+## Konfiguracja aplikacji
+
+Menu → **Ustawienia aplikacji**:
+
+- **Zmiana PIN-u aplikacji** (ten z pierwszego uruchomienia — chroni tylko start aplikacji).
+- **Odcisk palca zamiast PIN-u** — jeśli telefon ma skonfigurowaną biometrię.
+- **Blokuj aplikację przy uruchomieniu** — wyłączenie zostawia aplikację w trybie "zawsze odblokowana" (dalej
+  obowiązuje osobny PIN poziomu kotła przy zapisie, patrz niżej).
+
+Menu → **Wygląd**:
+
+- **Motyw** — ciemny / jasny / systemowy.
+- **Domyślny styl interfejsu** — nowoczesny (ten opisany w "Co potrafi" wyżej) albo klasyczny (replika panelu
+  Estyma Igneo Touch) — przełącznik dostępny również bezpośrednio z pulpitu.
+
+Menu → **Zmień urządzenie** — dodanie kolejnego modułu TeklaPelletCAN (wyszukiwanie w sieci lub po adresie IP) i
+przełączanie się między już dodanymi, bez usuwania poprzednich.
+
+**Tryb developera** (ukryty, nieprzeznaczony dla zwykłego użytkownika): PIN `1948` wpisany na ekranie "Poziom
+kotła" (Menu) przenosi do ekranu z wyborem kanału aktualizacji (stabilny/beta) — normalnie aplikacja sprawdza i
+proponuje tylko stabilne wydania.
+
 ## Bezpieczeństwo
 
 PIN aplikacji (opcjonalny) chroni tylko uruchomienie aplikacji. Osobny PIN poziomu kotła (0900/0999, jak w panelu
